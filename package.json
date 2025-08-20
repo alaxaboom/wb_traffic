@@ -1,0 +1,32 @@
+{
+    "name": "wb-tariffs-service",
+    "version": "1.0.0",
+    "description": "Service for fetching WB tariffs and updating Google Sheets",
+    "main": "dist/app.js",
+    "type": "module",
+    "scripts": {
+        "dev": "nodemon --watch src --ext ts --exec tsx src/app.ts",
+        "build": "tsc",
+        "start": "node dist/app.js",
+        "knex:dev": "tsx src/utils/knex.ts",
+        "knex": "node dist/utils/knex.js",
+        "test": "echo \"No tests specified\" && exit 0"
+    },
+    "dependencies": {
+        "axios": "^1.6.0",
+        "commander": "^11.1.0",
+        "dotenv": "^16.3.1",
+        "googleapis": "^126.0.1",
+        "knex": "^3.0.1",
+        "node-schedule": "^2.1.1",
+        "pg": "^8.11.3",
+        "zod": "^3.22.4"
+    },
+    "devDependencies": {
+        "@types/node": "^20.8.0",
+        "@types/node-schedule": "^2.1.0",
+        "nodemon": "^3.0.1",
+        "tsx": "^4.6.2",
+        "typescript": "^5.2.2"
+    }
+}
